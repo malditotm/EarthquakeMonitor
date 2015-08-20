@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
@@ -94,7 +95,7 @@ public class DetailAct extends FragmentActivity {
 	        .flat(true)
 	        .title(earthquake.getPlace())
 	        .snippet("Magnitude: " + earthquake.getMag())
-	        .icon(BitmapDescriptorFactory.fromResource(R.drawable.pointer_green))
+	        .icon(getBitmap(earthquake.getMag().intValue()))
 	        .anchor(0.5f, 1.0f)
 	        .position(originLatLng));
     	adjustBounds();
@@ -102,6 +103,44 @@ public class DetailAct extends FragmentActivity {
     
     public void adjustBounds(){
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(originLatLng, 7));
+    }
+    
+    public BitmapDescriptor getBitmap(int mag){
+    	BitmapDescriptor sprite;
+		switch (mag) {
+			case 0:
+				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_darker_green);
+				break;
+				
+			case 1:
+				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_dark_green);
+				break;
+				
+			case 2:
+				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_green);
+				break;
+	
+			case 3:
+			case 4:
+				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_yellow);
+				break;
+				
+			case 5:
+			case 6:
+				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_orange);
+				break;
+				
+			case 7:
+			case 8:
+				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_red);
+				break;
+				
+			case 9:
+			default:
+				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_dark_red);
+				break;
+		}
+		return sprite;
     }
     
     public void readValues(Intent fromIntent){

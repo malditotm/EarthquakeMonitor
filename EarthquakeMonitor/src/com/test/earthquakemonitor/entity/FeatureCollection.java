@@ -5,7 +5,6 @@ import java.util.List;
 public class FeatureCollection{
 	private String type;
 	private Metadata metadata;
-	//private Bbox bbox;
 	private List<Double> bbox;
 	private List<Feature> features;
 	

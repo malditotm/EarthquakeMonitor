@@ -83,7 +83,7 @@ public class MapSummaryAct extends FragmentActivity {
     }
     
     public BitmapDescriptor getBitmap(int mag){
-    	BitmapDescriptor sprite;// = BitmapDescriptorFactory.fromResource(R.drawable.pointer_green);
+    	BitmapDescriptor sprite;
 		switch (mag) {
 			case 0:
 				sprite = BitmapDescriptorFactory.fromResource(R.drawable.pointer_darker_green);

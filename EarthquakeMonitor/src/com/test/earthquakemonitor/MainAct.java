@@ -158,56 +158,53 @@ public class MainAct extends Activity {
 		switch (mag) {
 			case 0:
 				textView.setTextColor(getResources().getColor(R.color.range_0));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
 				textView.setBackgroundResource(R.drawable.info);
 				break;
 				
 			case 1:
 				textView.setTextColor(getResources().getColor(R.color.range_1));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
 				textView.setBackgroundResource(R.drawable.info);
 				break;
 				
 			case 2:
 				textView.setTextColor(getResources().getColor(R.color.range_2));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
 				textView.setBackgroundResource(R.drawable.info);
 				break;
 	
 			case 3:
 				textView.setTextColor(getResources().getColor(R.color.range_3));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
+				textView.setBackgroundResource(R.drawable.info);
 				break;
 				
 			case 4:
 				textView.setTextColor(Color.YELLOW);
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
+				textView.setBackgroundResource(R.drawable.info);
 				break;
 				
 			case 5:
 				textView.setTextColor(getResources().getColor(R.color.range_5));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
+				textView.setBackgroundResource(R.drawable.info);
 				break;
 				
 			case 6:
 				textView.setTextColor(getResources().getColor(R.color.range_6));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
+				textView.setBackgroundResource(R.drawable.info);
 				break;
 	
 			case 7:
 				textView.setTextColor(getResources().getColor(R.color.range_7));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
+				textView.setBackgroundResource(R.drawable.info);
 				break;
 	
 			case 8:
 				textView.setTextColor(Color.RED);
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
+				textView.setBackgroundResource(R.drawable.info);
 				break;
 				
 			case 9:
 			default:
 				textView.setTextColor(getResources().getColor(R.color.range_9));
-				textView.setBackgroundColor(getResources().getColor(R.color.purp));
+				textView.setBackgroundResource(R.drawable.info);
 				break;
 		}
 	}

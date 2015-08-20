@@ -4,7 +4,6 @@ import java.util.List;
 
 public class Geometry{
 	private String type;
-	//private Coordinate coordinates;
 	private List<Double> coordinates;
 	
 	public String getType() {
