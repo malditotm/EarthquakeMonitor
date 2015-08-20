@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.test.earthquakemonitor"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="15" />
+
+	<permission android:name="com.prolog.qbopro.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+	
+	<uses-feature
+		android:glEsVersion="0x00020000"
+		android:required="true"/>
+	
+	<uses-permission android:name="com.prolog.qbopro.permission.MAPS_RECEIVE"/>
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainAct"
+            android:label="@string/app_name"
+		    android:configChanges="orientation"
+		    android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <meta-data
+		    android:name="com.google.android.maps.v2.API_KEY"
+		    android:value="AIzaSyDVwudLTg04siarw7evAcQVzzw8znp8Dt8"/>
+        
+		<meta-data 
+		    android:name="com.google.android.gms.version" 
+		    android:value="7895000" />
+		<activity android:name="com.test.earthquakemonitor.map.DetailAct" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
+		<activity android:name="com.test.earthquakemonitor.map.MapSummaryAct" android:configChanges="orientation" android:screenOrientation="portrait"></activity>
+    </application>
+</manifest>

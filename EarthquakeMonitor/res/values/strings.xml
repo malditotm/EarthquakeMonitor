@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="O"> </string>
+    <string name="app_name">Earthquake Monitor</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="act_main_map_sum_btn">Summary Map</string>
+    <string name="act_main_refresh_btn">Refresh</string>
+    <string name="act_main_summary_label">Summary</string>
+    <string name="act_detail_alert_lbl">Alert:</string>
+    <string name="act_detail_depth_lbl">Depth:</string>
+    <string name="act_detail_felt_reports_lbl">Felt reports:</string>
+    <string name="act_detail_mag_lbl">Magnitude:</string>
+    <string name="act_detail_place_lbl">Place:</string>
+    <string name="act_detail_time_lbl">Time:</string>
+    <string name="act_detail_title_lbl">Earthquake details</string>
+    <string name="act_detail_updated_lbl">Updated:</string>
+    <string name="act_map_summary_find_pin_btn">Center Pin</string>
+
+</resources>

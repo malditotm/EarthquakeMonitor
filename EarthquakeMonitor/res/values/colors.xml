@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="range_0">#66AA88</color>
+    <color name="range_1">#66FF66</color>
+    <color name="range_2">#99FF33</color>
+    <color name="range_3">#CCFF33</color>
+    <color name="range_4">#A5EB4B</color>
+    <color name="range_5">#FFCC00</color>
+    <color name="range_6">#FF6600</color>
+    <color name="range_7">#FF9933</color>
+    <color name="range_8">#EDDA4C</color>
+    <color name="range_9">#cc0000</color>
+    
+    
+    <color name="gray_1">#CCCCCC88</color>
+    <color name="gray_2">#999999</color>
+    <color name="gray_3">#66666655</color>
+    <color name="gray_4">#333333</color>
+    
+    <color name="purp">#502B5C</color>
+    
+</resources>

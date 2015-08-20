@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        
+	    <fragment
+	        android:id="@+id/mapFragment"
+	        android:name="com.google.android.gms.maps.SupportMapFragment"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent" />
+	</RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp" >
+        
+		<Button
+            android:id="@+id/centerPinButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/find_pin_btn"
+            android:onClick="centerMapBtnOnClick"
+            android:contentDescription="@string/act_map_summary_find_pin_btn" />
+
+        <ToggleButton
+            android:id="@+id/showStreetWorldToggleButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/toggle_map_btn"
+            android:onClick="showStreetWorldToggleBtnOnClick"
+            android:clickable="true"
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+</LinearLayout>
