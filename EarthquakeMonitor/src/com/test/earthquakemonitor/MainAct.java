@@ -20,6 +20,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,7 +45,7 @@ import com.test.earthquakemonitor.vo.EarthquakesVo;
 
 public class MainAct extends Activity {
 	MainAct thisRef = this;
-	SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE dd MMM yyyy, HH:mm:ss a", Locale.ENGLISH);
+	SimpleDateFormat dateFormat = new SimpleDateFormat("EEE dd MMM yyyy, HH:mm:ss a", Locale.ENGLISH);
 	private InfoRetievedDS datasource;
 	
 	TextView generatedTimeTV;
@@ -110,7 +111,8 @@ public class MainAct extends Activity {
 	
 	void readInfo(){
 		hasEarthquakes = false;
-		FeatureCollection fetchData = (FeatureCollection) GsonUtil.gsonStringToObject(dataFromServer, new FeatureCollection());//Constants.JSON, new FeatureCollection());
+		FeatureCollection fetchData = (FeatureCollection) GsonUtil.gsonStringToObject(dataFromServer, new FeatureCollection());
+		Log.v("readedInfo", dataFromServer);
 		Date generatedDate = new Date(fetchData.getMetadata().getGenerated());
 		generatedTimeTV.setText(dateFormat.format(generatedDate));
 		
@@ -120,7 +122,25 @@ public class MainAct extends Activity {
 			eartquake = new EarthquakeItemVo();
 			eartquake.setMag(feature.getProperties().getMag());
 			eartquake.setPlace(feature.getProperties().getPlace());
-			eartquake.setAlert(feature.getProperties().getAlert());
+			String alert; 
+			if(feature.getProperties().getAlert() == null){
+				if(feature.getProperties().getMag()< 4){
+					alert = "green";
+				}
+				else if(feature.getProperties().getMag() <6){
+					alert = "yellow";
+				}
+				else if(feature.getProperties().getMag() <6){
+					alert = "orange";
+				}
+				else {
+					alert = "red";
+				}
+				eartquake.setAlert(alert);
+			}
+			else{
+				eartquake.setAlert(feature.getProperties().getAlert());
+			}
 			eartquake.setTime(feature.getProperties().getTime());
 			eartquake.setFelt(feature.getProperties().getFelt());
 			eartquake.setUpdated(feature.getProperties().getUpdated());

@@ -62,26 +62,29 @@ public final class R {
         public static final int toggle_map_btn=0x7f020010;
     }
     public static final class id {
-        public static final int action_refresh=0x7f0a0018;
+        public static final int action_refresh=0x7f0a001b;
         public static final int alertLbl=0x7f0a0006;
         public static final int alertVl=0x7f0a0007;
         public static final int centerPinButton=0x7f0a0011;
         public static final int depthLbl=0x7f0a000a;
         public static final int depthVl=0x7f0a000b;
         public static final int detailTitleLbl=0x7f0a0001;
+        public static final int earthquakesTextView=0x7f0a0016;
         public static final int feltLbl=0x7f0a000e;
         public static final int feltVl=0x7f0a000f;
-        public static final int generatedTimeTextView=0x7f0a0014;
+        public static final int generatedTimeTextView=0x7f0a0015;
+        public static final int hintTextView=0x7f0a0017;
         public static final int imageView1=0x7f0a0000;
+        public static final int infoDateTextView=0x7f0a0014;
         public static final int magLbl=0x7f0a0004;
         public static final int magVl=0x7f0a0005;
         public static final int mapFragment=0x7f0a0010;
         public static final int placeLbl=0x7f0a0002;
         public static final int placeVl=0x7f0a0003;
-        public static final int quakeList=0x7f0a0017;
-        public static final int refreshBtn=0x7f0a0016;
+        public static final int quakeList=0x7f0a001a;
+        public static final int refreshBtn=0x7f0a0019;
         public static final int showStreetWorldToggleButton=0x7f0a0012;
-        public static final int sumMapBtn=0x7f0a0015;
+        public static final int sumMapBtn=0x7f0a0018;
         public static final int sumaryTextView=0x7f0a0013;
         public static final int timeLbl=0x7f0a0008;
         public static final int timeVl=0x7f0a0009;
@@ -98,18 +101,21 @@ public final class R {
     }
     public static final class string {
         public static final int O=0x7f070000;
-        public static final int act_detail_alert_lbl=0x7f070006;
-        public static final int act_detail_depth_lbl=0x7f070007;
-        public static final int act_detail_felt_reports_lbl=0x7f070008;
-        public static final int act_detail_mag_lbl=0x7f070009;
-        public static final int act_detail_place_lbl=0x7f07000a;
-        public static final int act_detail_time_lbl=0x7f07000b;
-        public static final int act_detail_title_lbl=0x7f07000c;
-        public static final int act_detail_updated_lbl=0x7f07000d;
-        public static final int act_main_map_sum_btn=0x7f070003;
-        public static final int act_main_refresh_btn=0x7f070004;
-        public static final int act_main_summary_label=0x7f070005;
-        public static final int act_map_summary_find_pin_btn=0x7f07000e;
+        public static final int act_detail_alert_lbl=0x7f070009;
+        public static final int act_detail_depth_lbl=0x7f07000a;
+        public static final int act_detail_felt_reports_lbl=0x7f07000b;
+        public static final int act_detail_mag_lbl=0x7f07000c;
+        public static final int act_detail_place_lbl=0x7f07000d;
+        public static final int act_detail_time_lbl=0x7f07000e;
+        public static final int act_detail_title_lbl=0x7f07000f;
+        public static final int act_detail_updated_lbl=0x7f070010;
+        public static final int act_main_earthquakes_label=0x7f070004;
+        public static final int act_main_hint_label=0x7f070005;
+        public static final int act_main_info_date_label=0x7f070003;
+        public static final int act_main_map_sum_btn=0x7f070006;
+        public static final int act_main_refresh_btn=0x7f070007;
+        public static final int act_main_summary_label=0x7f070008;
+        public static final int act_map_summary_find_pin_btn=0x7f070011;
         public static final int action_refresh=0x7f070002;
         public static final int app_name=0x7f070001;
     }

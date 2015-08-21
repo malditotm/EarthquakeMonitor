@@ -71,7 +71,7 @@ public class EarthquakeItemVo {
 		this.latLng = new LatLng(lat, lng);
 	}
 	public String toString(){
-		String text = mag + " - " + place;
+		String text = mag + "°(mag) - @ " + place;
 		return text;
 	}
 }

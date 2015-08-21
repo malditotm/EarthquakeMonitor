@@ -16,11 +16,40 @@
         android:text="@string/act_main_summary_label" />
     
     <TextView
-        android:id="@+id/generatedTimeTextView"
+        android:id="@+id/infoDateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/sumaryTextView"
-        android:textSize="13sp"
+        android:layout_marginLeft="5dp"
+        android:textSize="11sp"
+        android:text="@string/act_main_info_date_label" />
+    
+    <TextView
+        android:id="@+id/generatedTimeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoDateTextView"
+        android:layout_marginLeft="5dp"
+        android:textSize="11sp"
+        android:text="@string/O" />
+    
+    <TextView
+        android:id="@+id/earthquakesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generatedTimeTextView"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:text="@string/act_main_earthquakes_label" />
+    
+    <TextView
+        android:id="@+id/hintTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/earthquakesTextView"
+        android:layout_marginLeft="25dp"
+        android:textSize="10sp"
         android:text="@string/O" />
 
     <ImageButton
@@ -51,8 +80,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/sumaryTextView"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/sumMapBtn" >
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/earthquakesTextView" >
     </ListView>
 
 </RelativeLayout>

@@ -4,6 +4,9 @@
     <string name="O"> </string>
     <string name="app_name">Earthquake Monitor</string>
     <string name="action_refresh">Refresh</string>
+    <string name="act_main_info_date_label">Info acquired date:</string>
+    <string name="act_main_earthquakes_label">Earthquakes occurred in the past hour:</string>
+    <string name="act_main_hint_label">(magnit. - place)</string>
     <string name="act_main_map_sum_btn">Summary Map</string>
     <string name="act_main_refresh_btn">Refresh</string>
     <string name="act_main_summary_label">Summary</string>

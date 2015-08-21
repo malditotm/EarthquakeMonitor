@@ -24,7 +24,7 @@ import com.test.earthquakemonitor.vo.EarthquakeItemVo;
 
 public class DetailAct extends FragmentActivity {
 	DetailAct thisRef = this;
-	SimpleDateFormat dateFormat = new SimpleDateFormat("EEEE dd MMM yyyy, HH:mm:ss a", Locale.ENGLISH);
+	SimpleDateFormat dateFormat = new SimpleDateFormat("EEE dd MMM yyyy, HH:mm:ss a", Locale.ENGLISH);
 	
 	private GoogleMap googleMap;
 	private SupportMapFragment mapFragment;
@@ -74,7 +74,13 @@ public class DetailAct extends FragmentActivity {
         alertVl.setText(earthquake.getAlert());
         timeVl.setText(dateFormat.format(new Date(earthquake.getTime())));
         depthVl.setText(earthquake.getDepth() + " km");
-        feltVl.setText(earthquake.getFelt() + " reports submitted");
+        int felt;
+        try{
+        	felt = earthquake.getFelt().intValue();
+        } catch (Exception e){
+        	felt = 0;
+        }
+        feltVl.setText(felt + " reports submitted");
         updateVl.setText(dateFormat.format(new Date(earthquake.getUpdated())));
     }
     
@@ -86,7 +92,6 @@ public class DetailAct extends FragmentActivity {
 
         originLatLng = new LatLng(39.028881, -101.574981);
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(originLatLng, 3));
-        System.out.println("set in position");
     }
     
     public void setMarker(){
@@ -94,7 +99,7 @@ public class DetailAct extends FragmentActivity {
     	originMarker = googleMap.addMarker(new MarkerOptions()
 	        .flat(true)
 	        .title(earthquake.getPlace())
-	        .snippet("Magnitude: " + earthquake.getMag())
+	        .snippet("Magnitude: " + earthquake.getMag() + "°")
 	        .icon(getBitmap(earthquake.getMag().intValue()))
 	        .anchor(0.5f, 1.0f)
 	        .position(originLatLng));
@@ -144,7 +149,6 @@ public class DetailAct extends FragmentActivity {
     }
     
     public void readValues(Intent fromIntent){
-    	System.out.println("read: " + fromIntent.getExtras().get("earthquake"));
     	earthquake = (EarthquakeItemVo) GsonUtil.gsonStringToObject(fromIntent.getExtras().get("earthquake").toString(), new EarthquakeItemVo());
     	originLatLng = earthquake.getLatLng();
     }
