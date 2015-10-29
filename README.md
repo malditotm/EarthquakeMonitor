@@ -2,7 +2,7 @@
 
 Project that fetch the information of the earthquakes within the last hour all over the Earth.
 
-This is an Eclipse ADT project.
+This is an Eclipse ADT project. And it is located in the EarthquakeMinitor folder.
 
 # Principal Screen 
 
